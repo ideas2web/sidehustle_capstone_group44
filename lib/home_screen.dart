@@ -110,13 +110,20 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               Container(
                 margin: const EdgeInsets.only(left: 30, right: 30),
-                child: const Text('Offers',
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                child: Container(
+                  
+                  decoration: const BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(25)),
+              color: Color(0xff000000),
+            ),
+                  child: const Text('Offers',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white)),
+                ),
               ),
               const Text(
                 'Kitchen Livingroom Bathroom',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
             ],
           ),
@@ -132,6 +139,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             margin: const EdgeInsets.only(left: 30, right: 30),
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
                   margin: const EdgeInsets.all(10),
@@ -143,15 +152,64 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Color(0xffffffff),
                   ),
                 ),
+                //const SizedBox(width: 60,),
                 Container(
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      Text('Fix Microwave', ),
+                      Text('Fix Microwave', style: TextStyle(fontWeight: FontWeight.bold),),
                       Text('Kitchen'),
                     ],
                   ),
                 ),
-                Container(),
+                Container(
+                  margin: const EdgeInsets.only(right: 15),
+                  child:
+                  const Icon(Icons.arrow_forward_ios)
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 20,),
+          Container(
+            height: 63,
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+              color: Color(0xffD6E3FF),
+            ),
+            margin: const EdgeInsets.only(left: 30, right: 30),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  width: 45,
+                  height: 45,
+                  child: const Icon(
+                    Icons.microwave,
+                    size: 40,
+                    color: Color(0xffffffff),
+                  ),
+                ),
+                //const SizedBox(width: 60,),
+                Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text('Fix TV set', style: TextStyle(fontWeight: FontWeight.bold),),
+                      Text('Living Room'),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(right: 15),
+                  child:
+                  const Icon(Icons.arrow_forward_ios)
+                ),
               ],
             ),
           ),
