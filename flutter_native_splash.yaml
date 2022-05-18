@@ -1,0 +1,10 @@
+flutter_native_splash:
+  image: assets/logo.png
+  android: true
+  ios: true
+  color: "1F319D"
+  fullscreen: true
+  android_gavity: center
+
+  image_dark: assets/logo.png
+  color_dark: "1F319D"
